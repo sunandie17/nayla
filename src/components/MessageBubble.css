@@ -1,0 +1,83 @@
+.message {
+  display: flex;
+  gap: 10px;
+  max-width: 100%;
+  animation: float-up 0.42s var(--ease) both;
+}
+
+.message.nayla {
+  justify-content: flex-start;
+}
+
+.message.user {
+  justify-content: flex-end;
+}
+
+.bubble {
+  position: relative;
+  padding: 11px 15px;
+  font-size: 15px;
+  line-height: 1.55;
+  max-width: min(78%, 460px);
+  word-wrap: break-word;
+  overflow-wrap: anywhere;
+  box-shadow: var(--shadow-bubble);
+}
+
+.message.nayla .bubble {
+  background: var(--bubble-nayla);
+  border: 1px solid var(--border);
+  color: var(--text-main);
+  border-radius: var(--radius-lg) var(--radius-lg) var(--radius-lg) 6px;
+  backdrop-filter: none;
+}
+
+.message.user .bubble {
+  background: var(--slate);
+  color: #fff;
+  border-radius: var(--radius-lg) var(--radius-lg) 6px var(--radius-lg);
+  box-shadow: var(--shadow-slate);
+}
+
+.meta {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 4px;
+  font-size: 11px;
+  color: var(--text-secondary);
+}
+
+.message.user .meta {
+  justify-content: flex-end;
+}
+
+.timestamp {
+  letter-spacing: 0.02em;
+}
+
+.typing {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 14px 16px;
+}
+
+.typing span {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--slate);
+  animation: typing-dot 1.2s infinite ease-in-out;
+}
+
+.typing span:nth-child(2) { animation-delay: 0.15s; }
+.typing span:nth-child(3) { animation-delay: 0.3s; }
+
+.mood-tag {
+  font-size: 10px;
+  text-transform: lowercase;
+  letter-spacing: 0.04em;
+  opacity: 0.7;
+  margin-left: 2px;
+}
